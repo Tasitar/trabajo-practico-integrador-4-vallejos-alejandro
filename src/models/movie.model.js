@@ -28,7 +28,7 @@ export const Movie = sequelize.define("Movie", {
     },
     synopsis: {
         type: DataTypes.TEXT,
-        allowNull: true
+        allowNull: true,
     }
 
 }
