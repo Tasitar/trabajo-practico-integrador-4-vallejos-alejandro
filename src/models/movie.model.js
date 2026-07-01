@@ -15,7 +15,7 @@ export const Movie = sequelize.define("Movie", {
     genre: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
+        unique: false,
     },
     duration: {
         type: DataTypes.INTEGER,
