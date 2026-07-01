@@ -1,6 +1,10 @@
 import { Router } from "express";
-import { createMovie, getMovies } from "../controllers/movie.controller.js";
+import { getMovies, getOneMovie, createMovie, updateMovie, deleteMovie } from "../controllers/movie.controller.js";
 
-export const movieRouter = Router()
-movieRouter.get('/movie', getMovies)
-movieRouter.post('/movie', createMovie)
+export const movieRouter = Router();
+
+movieRouter.get("/movies", getMovies);
+movieRouter.get("/movies/:id", getOneMovie);
+movieRouter.post("/movies", createMovie);
+movieRouter.put("/movies/:id", updateMovie);
+movieRouter.delete("/movies/:id", deleteMovie);
